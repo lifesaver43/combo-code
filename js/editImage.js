@@ -391,37 +391,20 @@ pickr.on("change", (...args) => {
   imageFrame.style.backgroundColor = `rgba(${color[0]},${color[1]},${color[2]},${color[3]})`;
 });
 
-import { toJpeg } from 'html-to-image';
-
 imageDownloadButton.addEventListener("click", () => {
-  // html2canvas(document.querySelector(".imageFrame"), {
-  //   allowTaint: true,
-  //   useCORS: true,
-  //   scale: window.devicePixelRatio,
-  //   // transform: scale(2, 2)
-  // }).then(function (canvas) {
-  //   let anchorTag = document.createElement("a");
-  //   anchorTag.download = "webshot.png";
-  //   anchorTag.href = canvas.toDataURL();
-  //   anchorTag.target = "_blank";
-  //   anchorTag.click();
-  // });
-    
-  downloadThumbnail()
+  html2canvas(document.querySelector(".imageFrame"), { quality: 1 }, {
+    allowTaint: true,
+    useCORS: true,
+    scale: window.devicePixelRatio,
+    // transform: scale(2, 2)
+  }).then(function (canvas) {
+    let anchorTag = document.createElement("a");
+    anchorTag.download = "webshot.png";
+    anchorTag.href = canvas.toDataURL();
+    anchorTag.target = "_blank";
+    anchorTag.click();
+  });
 });
-
-function downloadThumbnail(e) {
-  toJpeg(mainBar, { quality: 1 })
-  .then(function (dataUrl) {
-      const link = document.createElement('a');
-      link.download = 'thumbnail.jpeg';
-      link.href = dataUrl;
-      link.click();
-      link.remove();
-});
-} 
-
-// downloadBtn.addEventListener("click", downloadThumbnail);
 
 horizontalSlider.oninput = function () {
   imageFrame.style.paddingRight = this.value + "px";

@@ -270,7 +270,7 @@ input[type="file"] {
   flex-direction: column;
   background-color: #98B0FC;
   padding: 40px;
-  width: 75%;
+  width: 50%;
   /* formely: 40%; */
   box-sizing: border-box;
   margin: 2rem auto 2rem;
@@ -1689,14 +1689,14 @@ footer .contacts a div {
     display: none;
   }
 
-  .extension > div {
+  .extension>div {
     width: 70vw;
     gap: 0.5em;
 
     border: 1px solid black;
     border-radius: 1em;
     padding: 1em;
-    box-shadow: 8px 8px 0px -4px rgba(0,0,0,1);
+    box-shadow: 8px 8px 0px -4px rgba(0, 0, 0, 1);
   }
 
   .extension i {
@@ -1704,16 +1704,16 @@ footer .contacts a div {
     margin: 10px 0;
   }
 
-  .extension > div > p {
+  .extension>div>p {
     font-size: 1em;
   }
 
-  .extension > div > p:first-child {
+  .extension>div>p:first-child {
     font-size: 1.1em;
     font-weight: bold;
   }
 
-  .extension > div > button {
+  .extension>div>button {
     width: 8em;
     font-size: 1.1em;
     outline: none;
