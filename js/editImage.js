@@ -408,6 +408,7 @@ imageDownloadButton.addEventListener("click", () => {
 
 horizontalSlider.oninput = function () {
   imageFrame.style.paddingRight = this.value + "px";
+  // horizontalSlider.style.background = 'linear-gradient(to right, #98B0FC 0%, #98B0FC ' + this.value + '%, #fff ' + this.value + '%, white 100%)'
   imageFrame.style.paddingLeft = this.value + "px";
   horizontalSliderNum.textContent = this.value + "px";
 
@@ -479,3 +480,23 @@ function closeNav() {
 function resetEdit() {
   location.reload();
 }
+
+
+
+
+
+
+
+
+
+// console.log(document.querySelector("input[type=range]"))
+
+
+// const rangeSliders = document.querySelectorAll("input[type=range]")
+// rangeSliders.forEach(rangeSlider => {
+//   rangeSlider.oninput = function() {
+//     var value = (this.value-this.min)/(this.max-this.min)*100
+//     console.log(value)
+//     this.style.background = 'linear-gradient(to right, #98B0FC 0%, #98B0FC ' + value + '%, #fff ' + value + '%, white 100%)'
+//   };
+// })

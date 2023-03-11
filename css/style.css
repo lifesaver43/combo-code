@@ -1722,3 +1722,26 @@ footer .contacts a div {
   }
 
 }
+
+
+input[type='range'] {
+  background: linear-gradient(to right, #98B0FC 0%, #98B0FC 50%, #fff 50%, #fff 100%);
+  border: solid 1px #98B0FC;
+  border-radius: 8px;
+  height: 7px;
+  width: 100%;
+  outline: none;
+  /* -webkit-appearance: none; */
+  accent-color: #98B0FC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 6px;
+  -webkit-appearance: none;
+  height: 12px;
+  background: black;
+  border-radius: 2px;
+}
